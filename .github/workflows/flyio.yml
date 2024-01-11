@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: npm
+      - run: npm ci
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: npm run build
       - run: flyctl deploy --remote-only
