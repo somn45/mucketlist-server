@@ -15,6 +15,7 @@ const corsOptions = {
     'http://localhost:3000',
     'https://mucketlist-client-4z89.vercel.app/',
     'https://mucketlist.xyz',
+    'https://www.mucketlist.xyz'
   ],
   credentials: true,
   exposedHeaders: ['Set-Cookie'],
