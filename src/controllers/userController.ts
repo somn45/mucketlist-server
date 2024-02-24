@@ -102,6 +102,7 @@ export const spotifyAuth = async (
   req: express.Request,
   res: express.Response
 ) => {
+  console.log(process.env.DOMAIN);
   const spotifyApi = new SpotifyWebApi({
     clientId: process.env.SPOTIFY_CLIENT_ID,
     clientSecret: process.env.SPOTIFY_CLIENT_SECRET,

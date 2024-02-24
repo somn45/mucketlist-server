@@ -8,10 +8,14 @@ import cookieRouter from './routes/cookieRouters';
 
 // 내용 변경
 const app = express();
-const PORT = 3001;
+const PORT = 8080;
 
 const corsOptions = {
-  origin: true,
+  origin: [
+    'http://localhost:3000',
+    'https://mucketlist-client-4z89.vercel.app/',
+    'https://mucketlist.xyz',
+  ],
   credentials: true,
   exposedHeaders: ['Set-Cookie'],
 };
